@@ -4,7 +4,7 @@ dependencies:
   supports-color: 1.2.0
 devDependencies:
   chai: 3.5.0
-  mocha: 2.3.4
+  mocha: 2.4.5
   npm-check: 5.9.2
   prettier: 2.2.1
   requirejs: 2.3.3
@@ -1108,15 +1108,15 @@ packages:
     deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
     resolution:
       integrity: sha1-G79asbqCevI1dRQ0kEJkVfSB/h4=
-  /mkdirp/0.5.0:
+  /mkdirp/0.5.1:
     dependencies:
       minimist: 0.0.8
     deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
     dev: true
     hasBin: true
     resolution:
-      integrity: sha1-HXMHam35hs2TROFecfzAWkyavxI=
-  /mocha/2.3.4:
+      integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+  /mocha/2.4.5:
     dependencies:
       commander: 2.3.0
       debug: 2.2.0
@@ -1125,14 +1125,14 @@ packages:
       glob: 3.2.3
       growl: 1.8.1
       jade: 0.26.3
-      mkdirp: 0.5.0
+      mkdirp: 0.5.1
       supports-color: 1.2.0
     dev: true
     engines:
       node: '>= 0.8.x'
     hasBin: true
     resolution:
-      integrity: sha1-himm+wRPLSJapLgaKuLQAWmesmY=
+      integrity: sha1-FRdo3Sh161G8gpXpgAAm6fK7OY8=
   /ms/0.7.1:
     dev: true
     resolution:
@@ -1941,7 +1941,7 @@ specifiers:
   chai: 3.5.0
   growl: 1.8.1
   jade: 0.26.3
-  mocha: 2.3.4
+  mocha: 2.4.5
   npm-check: ^5.9.2
   prettier: ^2.2.1
   requirejs: 2.3.3
