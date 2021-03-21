@@ -199,8 +199,7 @@ body.mocha-dark {
 }
 
 .mocha-dark #mocha .test .html-error {
-  color: red; /* BSAC */
-/* TODO was 2.3.4   color: yellow; *//* BSAC */
+  color: yellow; /* BSAC */
 }
 
 #mocha .test .html-error pre.error {
@@ -336,15 +335,14 @@ body.mocha-dark {
 
 .mocha-dark #mocha-stats em {
   color: white; /* BSAC */
-/* TODO was 2.3.4 color: yellow; */ /* BSAC */
 }
 
 .mocha-dark #mocha-stats .passes em {
-    color: green; /* BSAC */
+  color: green; /* BSAC */
 }
 
 .mocha-dark #mocha-stats .failures em {
-    color: red; /* BSAC */
+  color: red; /* BSAC */
 }
 
 #mocha-stats a {
