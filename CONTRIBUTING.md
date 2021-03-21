@@ -65,6 +65,9 @@ When the mocha team releases a new version we need to check whether the CSS need
 bump.sh "to match Mocha release" `npm view mocha version`
 ```
 
+* log in to npm with `npm login`
+* release the package to npm with `make publish`
+
 ## TODO
 
 * First, check mocha tests in browser working, then dark scheme, then update mocha to latest and update css
