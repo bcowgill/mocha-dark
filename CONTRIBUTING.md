@@ -1,6 +1,6 @@
 # <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> Contributing to mocha-dark
 
-A dark color scheme for Mocha, the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser.
+☕️ A dark color scheme for Mocha, the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
 ## Developing
 

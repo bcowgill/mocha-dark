@@ -1,6 +1,6 @@
 # <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark
 
-A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser.
+☕️ A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
 ## Motivation
 
@@ -55,6 +55,7 @@ npm run test:dark
 
 ### Mocha Dark Theme
 <img src="./images/mocha-dark-theme.png" alt="Mocha Dark Theme" />
+
 ### Mocha Default Theme
 <img src="./images/mocha-default-theme.png" alt="Mocha Default Theme" />
 
