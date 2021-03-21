@@ -20,7 +20,7 @@ fi
 
 # Update the version numbers in some files
 # README.md: (version: 0.3.3)
-perl -i.bak -pne 's{(version: \s+)([\.0-9]+)}{$1$ENV{REL_VER}}xmsg; \
+perl -i.bak -pne 's{(version: \s+)([\.0-9]+)}{$1$ENV{REL_VER}}xmsg;' \
    $VERFILES
 
 function check_version {
@@ -32,8 +32,7 @@ function check_version {
 		echo NOT OK - "$file" does not contain $REL_VER release version
 		exit 40
 	fi
-
-	}
+}
 
 check_version README.md
 check_version mocha.js
