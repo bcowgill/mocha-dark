@@ -1,4 +1,4 @@
-# Contributing to mocha-dark
+# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> Contributing to mocha-dark
 
 A dark color scheme for Mocha, the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser.
 
@@ -62,18 +62,8 @@ When the mocha team releases a new version we need to check whether the CSS need
 * update our package version to match Mocha:
 
 ```sh
-pnpm version `npm view mocha version`
+bump.sh "to match Mocha release" `npm view mocha version`
 ```
-
-## Updating the mocha-dark.css and mocha-dark.js files for a new release of mocha:
-
-1. create a new directory for the version: mocha-N.M.O
-2. npm install mocha to get the new version of mocha
-3. put the mocha.css and mocha.js files in there from the node modules directory
-4. symbolic link
-5. vdiff the files with the previous version directory.
-
-### Updating for a new Mocha release
 
 ## TODO
 

@@ -51,7 +51,9 @@
     "pretest:dark": "perl -i -pne 's{mocha/mocha\\.(css|js)}{../mocha.$1}g; s{test/mocha-test}{test/mocha-dark-test}g' mocha-test.html",
     "test:dark": "make test-all",
     "pretest:light": "perl -i -pne 's{\\.\\./mocha\\.(css|js)}{mocha/mocha.$1}g; s{test/mocha-dark-test}{test/mocha-test}g' mocha-test.html",
-    "test:light": "make test-all"
+    "test:light": "make test-all",
+    "preversion": "./scripts/pre-version.sh",
+    "version": "./scripts/version.sh"
   },
   "dependencies": {
     "growl": "1.8.1",
