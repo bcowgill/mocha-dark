@@ -1,0 +1,76 @@
+{
+  "name": "mocha-dark",
+  "version": "2.2.5",
+  "description": "Dark color scheme for Mocha, the simple, flexible, fun JavaScript test framework for The Browser",
+  "homepage": "https://github.com/bcowgill/mocha-dark#readme",
+  "keywords": [
+    "mocha",
+    "dark",
+    "theme",
+    "scheme",
+    "style",
+    "accessible",
+    "prefers-color-scheme",
+    "test",
+    "bdd",
+    "tdd",
+    "tap",
+    "testing"
+  ],
+  "author": "Brent S.A. Cowgill <zardozcs@gmail.com> (http://github.com/bcowgill)",
+  "contributors": [
+    "Joshua Appelman <joshua@jbna.nl>",
+    "Christoffer Hallas <christoffer.hallas@gmail.com>",
+    "Christopher Hiller <chiller@badwing.com>",
+    "Travis Jeffery <tj@travisjeffery.com>",
+    "Daniel St. Jules <danielst.jules@gmail.com>",
+    "David da Silva Contín <dasilvacontin@gmail.com>",
+    "Ariel Mashraki <ariel@mashraki.co.il>",
+    "Pawel Kozlowski <pkozlowski.opensource@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcowgill/mocha-dark.git"
+  },
+  "maintainers": [
+    "Brent S.A. Cowgill <zardozcs@gmail.com>"
+  ],
+  "main": "./mocha.js",
+  "browser": "./mocha.js",
+  "bugs": {
+    "url": "https://github.com/bcowgill/mocha-dark/issues"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "scripts": {
+    "usage": "pnpm run",
+    "check": "npm-check --color-always --ignore browser || true",
+    "test": "make test-all"
+  },
+  "dependencies": {
+    "growl": "1.8.1",
+    "jade": "0.26.3",
+    "supports-color": "~1.2.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.2.5",
+    "npm-check": "^5.9.2",
+    "prettier": "^2.2.1",
+    "requirejs": "2.3.3"
+  },
+  "files": [
+    "README.md",
+    "mocha.css",
+    "mocha.js",
+    "LICENSE"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/mochajs/mocha/master/LICENSE"
+    }
+  ]
+}
