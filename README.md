@@ -28,7 +28,7 @@ And changed back to light mode with the reverse command:
 perl -i -pne 's{mocha-dark/mocha\.(css|js)}{mocha/mocha.$1}g' test/*.html
 ```
 
-or with your git source control if you haven't changed the tests in any other way:
+or with your *git* source control if you haven't changed the tests in any other way:
 
 ```sh
 git checkout -- test/*.html
