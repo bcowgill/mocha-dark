@@ -1,6 +1,6 @@
 {
   "name": "mocha-dark",
-  "version": "2.2.5",
+  "version": "2.2.4",
   "description": "Dark color scheme for Mocha, the simple, flexible, fun JavaScript test framework for The Browser",
   "homepage": "https://github.com/bcowgill/mocha-dark#readme",
   "keywords": [
@@ -76,7 +76,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/mochajs/mocha/master/LICENSE"
+      "url": "https://github.com/bcowgill/mocha-dark/blob/main/LICENSE"
     }
   ]
 }

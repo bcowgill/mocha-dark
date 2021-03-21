@@ -43,4 +43,4 @@ else
 fi
 
 echo GIT push version $REL_VER $MESSAGE
-git push origin master --tags
+git push origin main --tags
