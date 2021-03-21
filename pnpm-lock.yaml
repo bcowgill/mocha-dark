@@ -4,7 +4,7 @@ dependencies:
   supports-color: 1.2.1
 devDependencies:
   chai: 3.5.0
-  mocha: 2.2.5
+  mocha: 2.3.4
   npm-check: 5.9.2
   prettier: 2.2.1
   requirejs: 2.3.3
@@ -426,12 +426,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=
-  /debug/2.0.0:
+  /debug/2.2.0:
     dependencies:
-      ms: 0.6.2
+      ms: 0.7.1
     dev: true
     resolution:
-      integrity: sha1-ib2d9nMrUSVrxnBTQrugLtEhMe8=
+      integrity: sha1-+HBX6ZWxofauaklgZkE3vFbwOdo=
   /debug/4.3.1:
     dependencies:
       ms: 2.1.2
@@ -1116,27 +1116,27 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-HXMHam35hs2TROFecfzAWkyavxI=
-  /mocha/2.2.5:
+  /mocha/2.3.4:
     dependencies:
       commander: 2.3.0
-      debug: 2.0.0
+      debug: 2.2.0
       diff: 1.4.0
       escape-string-regexp: 1.0.2
       glob: 3.2.3
       growl: 1.8.1
       jade: 0.26.3
       mkdirp: 0.5.0
-      supports-color: 1.2.1
+      supports-color: 1.2.0
     dev: true
     engines:
       node: '>= 0.8.x'
     hasBin: true
     resolution:
-      integrity: sha1-07cqT+SeyUOTU/GsiT28Qw2ZMUA=
-  /ms/0.6.2:
+      integrity: sha1-himm+wRPLSJapLgaKuLQAWmesmY=
+  /ms/0.7.1:
     dev: true
     resolution:
-      integrity: sha1-2JwhJMb9wTU9Zai3e/GqxLGTcIw=
+      integrity: sha1-nNE8A62/8ltl7/3nzoZO6VIBcJg=
   /ms/2.1.2:
     dev: true
     resolution:
@@ -1720,7 +1720,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+  /supports-color/1.2.0:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-/x7R5hFp0Gs88tWI4YixjYhH4X4=
   /supports-color/1.2.1:
+    dev: false
     engines:
       node: '>=0.8.0'
     hasBin: true
@@ -1941,7 +1949,7 @@ specifiers:
   chai: 3.5.0
   growl: 1.8.1
   jade: 0.26.3
-  mocha: 2.2.5
+  mocha: 2.3.4
   npm-check: ^5.9.2
   prettier: ^2.2.1
   requirejs: 2.3.3
