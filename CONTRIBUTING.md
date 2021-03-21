@@ -41,6 +41,30 @@ make test
 
 The sample test shows a passing, failing and skipped/pending test so you can see all possible combinations of the color theme elements.
 
+### Testing light/dark switch
+
+You can change the `mocha-test.html` to use light or dark scheme via two commands:
+
+```sh
+npm run test:dark
+
+npm run test:light
+```
+
+### Updating for a new Mocha release
+
+When the mocha team releases a new version we need to check whether the CSS needs changing and incorporate any new styles.
+
+* Install the new version of mocha locally. `pnpm install --save-dev mocha`
+* run `./diffmocha.sh` to compare the new release against our code and incorporate any needed changes (`mocha.css`, `mocha.js`, and `package.json`).
+* run `make depends` and `pnpm install` to install any new *mocha* dependencies.
+* run `make test` and ensure the visual style is still clear and all features work.
+* update our package version to match Mocha:
+
+```sh
+pnpm version `npm view mocha version`
+```
+
 ## Updating the mocha-dark.css and mocha-dark.js files for a new release of mocha:
 
 1. create a new directory for the version: mocha-N.M.O
@@ -49,6 +73,7 @@ The sample test shows a passing, failing and skipped/pending test so you can see
 4. symbolic link
 5. vdiff the files with the previous version directory.
 
+### Updating for a new Mocha release
 
 ## TODO
 

@@ -13,3 +13,4 @@ fi
 
 $DIFF ./node_modules/mocha/mocha.css mocha.css
 $DIFF ./node_modules/mocha/mocha.js mocha.js
+$DIFF ./node_modules/mocha/package.json package.json

@@ -1,4 +1,4 @@
-// version 2.2.5
+// version: 2.2.5
 // See BSAC markers for changes due to dark color scheme.
 ;(function(){
 
