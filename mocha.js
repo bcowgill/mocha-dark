@@ -12132,7 +12132,7 @@ exports = module.exports = growl;
  * Node-growl version.
  */
 
-exports.version = '1.4.1'
+exports.version = '1.4.1' // BSAC node-growl embedded in mocha
 
 /**
  * Send growl notification _msg_ with _options_.

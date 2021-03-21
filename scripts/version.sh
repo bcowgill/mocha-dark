@@ -57,7 +57,7 @@ read prompt
 
 echo Step 4: Test the extracted npm module locally to see if it works.
 tar xvzf $TAR
-grep version: package/*.js*
+grep version package/*.* | grep $REL_VER
 #./perl/js-test.js ../package/ $REL_VER | grep $PROJ
 rm -rf $TAR ./package
 
