@@ -1,4 +1,4 @@
-# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 2.2.5
+# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 2.3.4
 
 ☕️ A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
@@ -9,7 +9,7 @@ For accessibility, for those who have visual difficulties or for those who just 
 
 ## Features
 
-In this release (version: 2.2.5) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
+In this release (version: 2.3.4) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
 * Contains both default (light) and dark scheme.
 * The user can make the page render dark on startup.
 * The user can toggle the scheme and have the setting remembered.
@@ -89,3 +89,4 @@ And this setting will be remembered using a browser cookie (for up to a year) bu
 
 ## Release History
 * 2.2.5 initial package matching an old version of mocha and providing only the dark scheme.
+* 2.3.4 to match Mocha release with both light/dark CSS and mocha-dark class on body element and cookie setting to remember change to chosen scheme.
