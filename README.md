@@ -60,3 +60,4 @@ npm run test:dark
 <img src="./images/mocha-default-theme.png" alt="Mocha Default Theme" />
 
 ## Release History
+* 2.2.5 initial package matching an old version of mocha
