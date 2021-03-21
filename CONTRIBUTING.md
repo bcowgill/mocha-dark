@@ -43,13 +43,15 @@ The sample test shows a passing, failing and skipped/pending test so you can see
 
 ### Testing light/dark switch
 
-You can change the `mocha-test.html` to use light or dark scheme via two commands:
+You can change the `mocha-dark-test.html` to use light or dark scheme via two commands:
 
 ```sh
 npm run test:dark
 
 npm run test:light
 ```
+
+This will set the initial load scheme for the dark test page. Remember if you then view the page through a web server you can change and remember the scheme for next reload.  Otherwise loading through `file://` will forget the changed setting on each refresh.
 
 ### Updating for a new Mocha release
 
