@@ -55,14 +55,14 @@ $NPM pack && tar tvzf $TAR
 echo If there are files in the package which should not be you need to add them to the .npmignore file, press Ctrl-C
 read prompt
 
-#echo Step 4: Test the extracted npm module locally to see if it works.
-#tar xvzf $TAR
-#grep version package/*.js*
+echo Step 4: Test the extracted npm module locally to see if it works.
+tar xvzf $TAR
+grep version: package/*.js*
 #./perl/js-test.js ../package/ $REL_VER | grep $PROJ
-#rm -rf $TAR ./package
+rm -rf $TAR ./package
 
 echo ""
-echo Step 4: Add, commit, tag, push. What npm would normally do after running version script:
+echo Step 5: Add, commit, tag, push. What npm would normally do after running version script:
 git add $VERFILES package.json
 git commit -m "release Version $REL_VER $VMESSAGE"
 tag-version.sh $REL_VER "release Version $REL_VER $VMESSAGE"
