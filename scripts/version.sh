@@ -63,6 +63,6 @@ read prompt
 
 echo ""
 echo Step 4: Add, commit, tag, push. What npm would normally do after running version script:
-git add $VERFILES
+git add $VERFILES package.json
 git commit -m "release Version $REL_VER $VMESSAGE"
 tag-version.sh $REL_VER "release Version $REL_VER $VMESSAGE"
