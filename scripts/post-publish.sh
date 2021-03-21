@@ -69,5 +69,5 @@ pushd package
 popd
 echo ""
 echo Step 8: Test local package installed from NPM registry.
-grep version: package/node_modules/$PKG/*
+grep version: package/node_modules/$PKG/*.*
 #./perl/js-test.js ../package/node_modules/$PKG/ $REL_VER
