@@ -58,18 +58,18 @@ else
 	exit 73
 fi
 
+COUNT=1
+if [ "`grep $REL_VER mocha.css | wc -l`" == "$COUNT" ] ; then
+	echo ok "mocha.css" version updated
+else
+	echo NOT OK - "mocha.css" does not contain $COUNT release version $REL_VER numbers
+	exit 74
+fi
+
 if grep "\* $REL_VER" README.md ; then
 	echo ok README.md
 else
 	echo NOT OK - README.md does not contain a version $REL_VER release note
-	exit 74
-fi
-
-COUNT=1
-if [ "`grep $REL_VER mocha.css | wc -l`" == "$COUNT" ] ; then
-	echo ok mocha.css file versions updated
-else
-	echo NOT OK - mocha.css file do not contain $COUNT release version $REL_VER numbers
 	exit 75
 fi
 

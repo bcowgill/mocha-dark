@@ -1,4 +1,4 @@
-# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark
+# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 2.2.5
 
 ☕️ A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
@@ -9,11 +9,18 @@ For accessibility, for those who have visual difficulties or for those who just 
 
 ## Features
 
-In this release (version: 2.2.5) we simply provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
+In this release (version: 2.2.5) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
+* Contains both default (light) and dark scheme.
+* The user can make the page render dark on startup.
+* The user can toggle the scheme and have the setting remembered.
+
+## Issues
+* Remembering your color setting does not work for pages loaded from file:// because it uses a cookie.
+* The circular progress indicator does not update color scheme until the page is reloaded.
 
 ## Usage
 
-After installing *mocha-dark* you simply need to replace `mocha/mocha.css` with `mocha-dark/mocha.css` within any `*.html` testing files in your project.
+After installing *mocha-dark* you need to replace `mocha/mocha.css` with `mocha-dark/mocha.css` within any `*.html` testing files in your project.
 
 And `mocha/mocha.js` with `mocha-dark/mocha.js` within any `*.html` testing files or any `*.js` files you use to import `mocha.js` in your project.
 
@@ -23,15 +30,18 @@ This could be simply accomplished with a single command:
 perl -i -pne 's{mocha/mocha\.(css|js)}{mocha-dark/mocha.$1}g' test/*.html
 ```
 
-And changed back to light mode with the reverse command:
+Then you can set the dark scheme on startup by adding a `class="mocha-dark"` to the *body* element of your `*.html` pages.
+
+Again a single command can do that:
+
 ```sh
-perl -i -pne 's{mocha-dark/mocha\.(css|js)}{mocha/mocha.$1}g' test/*.html
+perl -i -pne 's{<body>}{<body class="mocha-dark">}g' test/*.html
 ```
 
-or with your *git* source control if you haven't changed the tests in any other way:
+It is then simpler to switch back to the default scheme:
 
 ```sh
-git checkout -- test/*.html
+perl -i -pne 's{"mocha-dark"}{"mocha-light"}g' test/*.html
 ```
 
 To automate this process when you run your tests you can add an additional target to your `package.json`
@@ -40,7 +50,9 @@ To automate this process when you run your tests you can add an additional targe
 // in package.json:
 "scripts": {
   "test": "mocha ...",
-  "pretest:dark": "perl -i -pne 's{mocha/mocha\\.(css|js)}{mocha-dark/mocha.$1}g' test/*.html",
+  "pretest:light": "perl -i -pne 's{\"mocha-dark\"}{\"mocha-light\"}g' test/*.html",
+  "test:light": "npm test"
+  "pretest:dark": "perl -i -pne 's{\"mocha-light\"}{\"mocha-dark\"}g' test/*.html",
   "test:dark": "npm test"
 }
 ```
@@ -51,6 +63,22 @@ Then you run the dark tests with:
 npm run test:dark
 ```
 
+And back to the light tests with:
+
+```sh
+npm run test:light
+```
+
+## Changing Scheme in the Browser
+
+Once you are viewing the tests in the browser you can toggle the color scheme using a command in the *Javascript* console:
+
+```javascript
+mocha.setColorScheme('mocha-dark') // or mocha-light
+```
+
+And this setting will be remembered using a browser cookie (for up to a year) but only if you are viewing the page through a website (not `file://` protocol)
+
 ## Color Scheme Differences
 
 ### Mocha Dark Theme
@@ -60,4 +88,4 @@ npm run test:dark
 <img src="./images/mocha-default-theme.png" alt="Mocha Default Theme" />
 
 ## Release History
-* 2.2.5 initial package matching an old version of mocha
+* 2.2.5 initial package matching an old version of mocha and providing only the dark scheme.

@@ -198,7 +198,7 @@ body.mocha-dark {
 }
 
 .mocha-dark #mocha .test .html-error {
-  color: red; /* BSAC */
+  color: yellow; /* BSAC */
 }
 
 #mocha .test .html-error pre.error {

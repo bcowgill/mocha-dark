@@ -1,7 +1,7 @@
 dependencies:
   growl: 1.8.1
   jade: 0.26.3
-  supports-color: 1.2.1
+  supports-color: 1.2.0
 devDependencies:
   chai: 3.5.0
   mocha: 2.3.4
@@ -1721,19 +1721,11 @@ packages:
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
   /supports-color/1.2.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     hasBin: true
     resolution:
       integrity: sha1-/x7R5hFp0Gs88tWI4YixjYhH4X4=
-  /supports-color/1.2.1:
-    dev: false
-    engines:
-      node: '>=0.8.0'
-    hasBin: true
-    resolution:
-      integrity: sha1-Eu4hUHCGzZjBBY2ewPSsR2t687I=
   /supports-color/2.0.0:
     dev: true
     engines:
@@ -1953,4 +1945,4 @@ specifiers:
   npm-check: ^5.9.2
   prettier: ^2.2.1
   requirejs: 2.3.3
-  supports-color: ~1.2.0
+  supports-color: 1.2.0

@@ -12038,7 +12038,7 @@ var exec = require('child_process').exec
 function which(name) {
   var paths = process.env.PATH.split(':');
   var loc;
-  
+
   for (var i = 0, len = paths.length; i < len; ++i) {
     loc = path.join(paths[i], name);
     if (exists(loc)) return loc;
@@ -12435,6 +12435,12 @@ mocha.initColorScheme = function (scheme) {
       mocha.setColorScheme(mochaScheme);
     }
     else {
+      if (document.body.className.match(/\bmocha-dark\b/)) {
+         scheme = 'mocha-dark';
+      }
+      else if (document.body.className.match(/\bmocha-light\b/)) {
+         scheme = 'mocha-light';
+      }
       mocha.setColorScheme(scheme);
     }
   }
