@@ -50,4 +50,12 @@ Then you run the dark tests with:
 npm run test:dark
 ```
 
-## Releasea History
+## Color Scheme Differences
+
+### Mocha Dark Theme
+<img src="./images/mocha-dark-theme.png" alt="Mocha Dark Theme" />
+### Mocha Default Theme
+<img src="./images/mocha-default-theme.png" alt="Mocha Default Theme" />
+<img src="./images/mocha-logo.svg" alt="Mocha Logo" />
+
+## Release History
