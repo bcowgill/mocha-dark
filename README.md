@@ -91,5 +91,5 @@ ss
 <img src="./images/mocha-default-theme.png" alt="Mocha Default Theme" />
 
 ## Release History
-* 2.2.5 initial package matching an old version of mocha and providing only the dark scheme.
-* 2.3.4 to match Mocha release with both light/dark CSS and mocha-dark class on body element and cookie setting to remember change to chosen scheme.
+* 2.2.5 [initial](https://github.com/bcowgill/mocha-dark/blob/v2.2.5/README.md) package matching an old version of mocha and providing only the dark scheme.
+* 2.3.4 [release](https://github.com/bcowgill/mocha-dark/blob/v2.3.4/README.md) to match Mocha release with both light/dark CSS and mocha-dark class on body element and cookie setting to remember change to chosen scheme.
