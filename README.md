@@ -1,4 +1,4 @@
-# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 2.4.5
+# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 3.2.0
 
 ☕️ A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
@@ -9,7 +9,7 @@ For accessibility, for those who have visual difficulties or for those who just 
 
 ## Features
 
-In this release (version: 2.4.5) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
+In this release (version: 3.2.0) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
 * Contains both default (light) and dark scheme.
 * It detects the CSS media query prefers-color-scheme setting if your Operating System sets it and there is no override.
 * The user can make the page render dark on startup.
@@ -94,3 +94,4 @@ ss
 * 2.2.5 [initial](https://github.com/bcowgill/mocha-dark/blob/v2.2.5/README.md) package matching an old version of mocha and providing only the dark scheme.
 * 2.3.4 [release](https://github.com/bcowgill/mocha-dark/blob/v2.3.4/README.md) to match Mocha release with both light/dark CSS and mocha-dark class on body element and cookie setting to remember change to chosen scheme.
 * 2.4.5 [release](https://github.com/bcowgill/mocha-dark/blob/v2.4.5/README.md) to match Mocha release using localStorage instead of cookie to save settings.
+* 3.2.0 [release](https://github.com/bcowgill/mocha-dark/blob/v3.2.0/README.md) to match Mocha release hover and tooltip on progress indicator, replay color change.
