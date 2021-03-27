@@ -20856,7 +20856,9 @@
 	    }
 
 	    function isMochaInternal(line) {
-	      return ~line.indexOf('node_modules' + slash + 'mocha' + slash) || ~line.indexOf(slash + 'mocha.js') || ~line.indexOf(slash + 'mocha.min.js');
+	      return ~line.indexOf('node_modules' + slash + 'mocha' + slash)
+	        || ~line.indexOf(slash + 'mocha.js')
+	        || ~line.indexOf(slash + 'mocha.min.js');
 	    }
 
 	    function isNodeInternal(line) {
@@ -25786,11 +25788,12 @@
 	    var text = this._text || (percent | 0) + '%';
 	    var w = ctx.measureText(text).width;
 
-	    /* BSAC */
+	    /* DARK SCHEME */
 	    // handle mocha-dark color scheme
 	    try {
+	      ctx.fillStyle = "black"; // LIGHT SCHEME
 	      if (document.getElementsByClassName('mocha-dark').length) {
-	        ctx.fillStyle = 'yellow'; // BSAC DARK SCHEME
+	        ctx.fillStyle = 'yellow'; // DARK SCHEME
 	      }
 	    } finally {}
 
@@ -25988,14 +25991,26 @@
 	      }
 	    }
 
+	    /* DARK SCHEME */
+	    function drawProgress(percentIn) {
+	      if (progress$1) {
+	        var percent = percentIn || progress$1.percent || 0
+	         progress$1.update(percent).draw(ctx);
+	      }
+	    }
+	    mocha$1.drawProgress = drawProgress;
+	    /* DARK SCHEME */
+
 	    function updateStats() {
 	      // TODO: add to stats
 	      var percent = stats.tests / runner.total * 100 | 0;
 
+          drawProgress(percent) /* DARK SCHEME */
+	      /* DARK SCHEME - drawProgress
 	      if (progress$1) {
 	        progress$1.update(percent).draw(ctx);
 	      } // update stats
-
+	      DARK SChEME */
 
 	      var ms = new Date() - stats.start;
 	      text(passes, stats.passes);
@@ -27252,10 +27267,10 @@
 	  exports.JSONStream = exports['json-stream'] = jsonStream;
 	});
 
-	var name = "mocha";
-	var version$2 = "8.3.0"; /* BSAC need to update version? */
-	var homepage = "https://mochajs.org/";
-	var notifyLogo = "https://ibin.co/4QuRuGjXvl36.png"; /* BSAC update? */
+	var name = "mocha-dark"; /* LIGHT/DARK SCHEME */
+	var version$2 = "8.3.0"; /* BSAC MUSTDO need to update version? */
+	var homepage = "https://github.com/bcowgill/mocha-dark/"; /* LIGHT/DARK SCHEME */
+	var notifyLogo = "https://raw.githubusercontent.com/bcowgill/mocha-dark/main/images/mocha-dark-logo.svg"; /* DARK SCHEME */
 	var _package = {
 		name: name,
 		version: version$2,
@@ -30035,7 +30050,7 @@
 
 	mocha$1.run = function (fn) {
 	  var options = mocha$1.options;
-	  mocha$1.initColorScheme(options.colorScheme); /* BSAC DARK SCHEME */
+	  mocha$1.initColorScheme(options.colorScheme); /* DARK SCHEME */
 	  mocha$1.globals('location');
 	  var query = parseQuery(commonjsGlobal.location.search || '');
 
@@ -30065,16 +30080,17 @@
 	  });
 	};
 
-	/* BSAC DARK SCHEME
+	/* DARK SCHEME
 	  You can switch to a dark color scheme by:
 	  1. Using your operating system settings to change to dark mode so that the CSS media query prefers-color-scheme is set to dark.
 	  https://davidwalsh.name/prefers-color-scheme
 	  2. Adding <body class="mocha-dark"> to your index.html runner page to force it dark initially..
 	  3. Clicking on the circular (100%) progress indicator to toggle between light and dark.
-	    This will be saved in local storage or cookie so that the next refresh will remember your setting.
-	  4. mocha.setColorScheme('mocha-dark') in the console or code and the setting will be remembered in local storage or cookie.
+	    This will be saved in local storage so that the next refresh will remember your setting.
+	  4. mocha.updateColorScheme('mocha-dark') in the console or code and the setting will be remembered in local storage.
+	  5. mocha.updateColorScheme() to clear the local storage to reset to default.
 	*/
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	function prefersColorScheme() {
 	  let prefers = 'mocha-light'; // 'no-preference';
 	  try {
@@ -30090,19 +30106,7 @@
 	  return prefers;
 	}
 
-	/* BSAC */
-	function getColorSchemeCookie() {
-	  var scheme;
-	  try {
-	    scheme = document.cookie.replace(/(?:(?:^|.*;\s*)mocha-scheme\s*\=\s*([^;]*).*$)|^.*$/, "$1").trim();
-	    scheme = /^mocha-[a-z]+/.test(scheme) ? scheme : void 0;
-	  }
-	  finally {};
-	  // console.log('cookie mocha-scheme', scheme)
-	  return scheme;
-	}
-
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	function getColorSchemeStorage() {
 	  var scheme;
 	  try {
@@ -30114,7 +30118,7 @@
 	  return scheme;
 	}
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	function getColorSchemeBody() {
 	  var scheme;
 	  try {
@@ -30126,7 +30130,22 @@
 	  return scheme;
 	}
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
+	function setColorSchemeBody(scheme) {
+	  try {
+	    scheme = (scheme || '').trim();
+	    document.body.className = document.body.className.replace(/\bmocha-[a-z]+\b/g, '');
+	    if (scheme) {
+	      document.body.className += ' ' + scheme;
+	    }
+	    document.body.className = document.body.className.trim();
+	  }
+	  finally {};
+	  // console.log('set DOM body.className', scheme)
+	  return scheme;
+	}
+
+	/* DARK SCHEME ADDED */
 	function setColorSchemeStorage(scheme) {
 	  try {
 	    localStorage.setItem('mocha-scheme', scheme)
@@ -30136,39 +30155,48 @@
 	  return scheme;
 	}
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	mocha$1.getColorScheme = function () {
-	  return getColorSchemeStorage() || /* getColorSchemeCookie() || */ getColorSchemeBody() || prefersColorScheme()
+	  return getColorSchemeStorage() || getColorSchemeBody() || prefersColorScheme()
 	};
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	mocha$1.setColorScheme = function (scheme) {
-	  var cookieValue, maxAgeInSeconds = (60*60*24*365);
+	  var schemeValue;
 	  try {
-	    document.body.className = document.body.className.replace(/\bmocha-[a-z]+\b/g, '');
+	    setColorSchemeBody();
 	    if (scheme) {
-	      scheme = scheme.trim();
-	      document.body.className += ' ' + scheme;
-	      cookieValue = scheme;
+	      schemeValue = setColorSchemeBody(scheme);
 	    }
 	    else {
-	      cookieValue = prefersColorScheme();
+	      schemeValue = prefersColorScheme();
 	    }
-	    document.body.className = document.body.className.trim();
-	    // document.cookie = 'mocha-scheme=' + cookieValue + ';SameSite=Strict;max-age=' + maxAgeInSeconds;
-	    setColorSchemeStorage(cookieValue)
 	  }
 	  finally {};
+	  return schemeValue;
 	};
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
+	mocha$1.updateColorScheme = function (scheme) {
+	  var schemeValue = mocha$1.setColorScheme(scheme);
+	  schemeValue = scheme ? schemeValue : '';
+	  try {
+	    setColorSchemeStorage(schemeValue)
+	    mocha$1.drawProgress()
+	  }
+	  finally {};
+	  return schemeValue;
+	};
+
+	/* DARK SCHEME ADDED */
 	mocha$1.toggleColorScheme = function () {
 	  var scheme = mocha$1.getColorScheme();
 	  scheme = scheme === 'mocha-dark' ? 'mocha-light' : 'mocha-dark';
-	  mocha$1.setColorScheme(scheme);
+	  mocha$1.updateColorScheme(scheme);
+	  mocha$1.drawProgress();
 	};
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	function installSchemeToggle() {
 	  var interval = setInterval(function () {
 	    var dom = document.querySelectorAll('li.progress')
@@ -30180,19 +30208,14 @@
 	  }, 500);
 	}
 
-	/* BSAC */
+	/* DARK SCHEME ADDED */
 	mocha$1.initColorScheme = function (scheme) {
 	  try {
 	    installSchemeToggle();
 	    var mochaScheme = mocha$1.getColorScheme();
 	    console.log('mochaScheme', mochaScheme)
 	    console.log('change light/dark color scheme with mocha.setColorScheme("mocha-dark") or click the circular progress indicator to save your setting.')
-	    if (mochaScheme) {
-	      mocha$1.setColorScheme(mochaScheme);
-	    }
-	    else {
-	      mocha$1.setColorScheme(scheme);
-	    }
+	    mocha$1.setColorScheme(mochaScheme || scheme);
 	  }
 	  finally {};
 	};
