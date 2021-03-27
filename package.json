@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/bcowgill/mocha-dark#readme",
   "logo": "https://raw.githubusercontent.com/bcowgill/mocha-dark/main/images/mocha-dark-logo.svg",
+  "notifyLogo": "https://raw.githubusercontent.com/bcowgill/mocha-dark/main/images/mocha-dark-logo.png",
   "engines": {
     "node": ">= 10.12.0",
     "npm": ">= 1.4.x"
@@ -50,7 +51,7 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "mocha": "8.3.0",
+    "mocha": "8.3.2",
     "npm-check": "^5.9.2",
     "prettier": "^2.2.1",
     "requirejs": "2.3.6"

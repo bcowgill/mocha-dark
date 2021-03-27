@@ -72,6 +72,5 @@ bump.sh "to match Mocha release" `npm view mocha version`
 
 ## TODO
 
-* wip then update to latest mocha v8, update js css and release
 * Use cypress to run the in browser test and capture screen shot
 * submit pull request for mocha dark
