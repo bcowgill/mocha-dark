@@ -19794,7 +19794,7 @@
 
 
 	    var he = {
-	      'version': '1.2.0',
+	      'version': [1,2,0].join('.'), // BSAC FIX HTML Encode version number
 	      'encode': encode,
 	      'decode': decode,
 	      'escape': escape,
@@ -27268,7 +27268,7 @@
 	});
 
 	var name = "mocha-dark"; /* LIGHT/DARK SCHEME */
-	var version$2 = "8.3.0"; /* BSAC MUSTDO need to update version? */
+	var version$2 = "8.3.0";
 	var homepage = "https://github.com/bcowgill/mocha-dark/"; /* LIGHT/DARK SCHEME */
 	var notifyLogo = "https://raw.githubusercontent.com/bcowgill/mocha-dark/main/images/mocha-dark-logo.svg"; /* DARK SCHEME */
 	var _package = {

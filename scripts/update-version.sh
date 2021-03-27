@@ -20,13 +20,13 @@ fi
 
 # Update the version numbers in some files
 # README.md: (version: 0.3.3)
-perl -i.bak -pne 's{(version: \s+)([\.0-9]+)}{$1$ENV{REL_VER}}xmsg;' \
+perl -i.bak -pne 's{(version.*?[=:].*?)([0-9]+\.[0-9]+\.[0-9]+)}{$1$ENV{REL_VER}}xmsg;' \
    $VERFILES
 
 function check_version {
 	local file
 	file="$1"
-	if grep "$REL_VER" "$file" ; then
+	if egrep "version.*[:=]" "$file" | grep "$REL_VER" ; then
 		echo ok "$file" version updated
 	else
 		echo NOT OK - "$file" does not contain $REL_VER release version
