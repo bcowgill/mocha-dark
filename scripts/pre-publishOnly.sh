@@ -50,7 +50,7 @@ if [ -z "$REL_VER" ]; then
 	exit 72
 fi
 
-COUNT=1
+COUNT=2
 if [ "`grep $REL_VER mocha.js | wc -l`" == "$COUNT" ] ; then
 	echo ok "mocha.js" version updated
 else

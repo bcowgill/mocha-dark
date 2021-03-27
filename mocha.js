@@ -1,4 +1,4 @@
-// "version": "3.2.0",
+// "version": "8.3.0",
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -230,7 +230,7 @@
 	(module.exports = function (key, value) {
 	  return sharedStore[key] || (sharedStore[key] = value !== undefined ? value : {});
 	})('versions', []).push({
-	  version: '3.8.3',
+	  version: [3, 8, 3].join('.'), // BSAC FIX sharedStore version number
 	  mode:  'global',
 	  copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
 	});
