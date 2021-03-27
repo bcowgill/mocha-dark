@@ -11,13 +11,15 @@ For accessibility, for those who have visual difficulties or for those who just 
 
 In this release (version: 3.2.0) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
 * Contains both default (light) and dark scheme.
-* It detects the CSS media query prefers-color-scheme setting if your Operating System sets it and there is no override.
+* It detects the CSS media query prefers-color-scheme setting on startup if your Operating System sets it and there is no override.
+* It changes to dark or light as your OS changes the preferes-color-scheme setting if no override is stored.
 * The user can make the page render dark on startup.
 * The user can click to toggle the scheme and have the setting remembered.
+* When you change the scheme the circular progress indicator now re-renders correctly without a reload.
 * Color scheme setting is remembered for `file://` protocol as well as web server pages.
 
 ## Issues
-* The circular progress indicator does not update color scheme until the page is reloaded.
+* None known.  Please [report](https://github.com/bcowgill/mocha-dark/issues) any you discover.
 
 ## Usage
 
@@ -79,7 +81,13 @@ The currently clicked setting is remembered using browser `localStorage` so it w
 Alternatively, you can toggle the color scheme using a command in the *Javascript* console:
 
 ```javascript
-mocha.setColorScheme('mocha-dark') // or mocha-light
+mocha.updateColorScheme('mocha-dark') // or mocha-light
+```
+
+And you can remove the setting from `localStorage` completely with:
+
+```javascript
+mocha.updateColorScheme()
 ```
 
 ## Color Scheme Differences
