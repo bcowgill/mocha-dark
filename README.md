@@ -81,7 +81,7 @@ Alternatively, you can toggle the color scheme using a command in the *Javascrip
 ```javascript
 mocha.setColorScheme('mocha-dark') // or mocha-light
 ```
-ss
+
 ## Color Scheme Differences
 
 ### Mocha Dark Theme
