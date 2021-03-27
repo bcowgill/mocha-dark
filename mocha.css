@@ -5,6 +5,11 @@ body {
   margin:0;
 }
 
+#mocha {
+  font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 60px 50px;
+}
+
 html.mocha-dark,
 body.mocha-dark {
   background: black; /* BSAC */
@@ -173,7 +178,6 @@ body.mocha-dark {
 #mocha .test .html-error {
   overflow: auto;
   color: black;
-  line-height: 1.5;
   display: block;
   float: left;
   clear: left;
@@ -188,12 +192,12 @@ body.mocha-dark {
   max-height: 300px;
   word-wrap: break-word;
   border-bottom-color: #ddd;
-  -webkit-border-radius: 3px;
   -webkit-box-shadow: 0 1px 3px #eee;
-  -moz-border-radius: 3px;
   -moz-box-shadow: 0 1px 3px #eee;
-  border-radius: 3px;
   box-shadow: 0 1px 3px #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .mocha-dark #mocha .test .html-error {
@@ -203,10 +207,10 @@ body.mocha-dark {
 #mocha .test .html-error pre.error {
   border: none;
   -webkit-border-radius: 0;
-  -webkit-box-shadow: 0;
   -moz-border-radius: 0;
-  -moz-box-shadow: 0;
   border-radius: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
   box-shadow: 0;
   padding: 0;
   margin: 0;
@@ -233,12 +237,12 @@ body.mocha-dark {
   max-width: calc(100% - 42px); /*(2)*/
   word-wrap: break-word;
   border-bottom-color: #ddd;
-  -webkit-border-radius: 3px;
   -webkit-box-shadow: 0 1px 3px #eee;
-  -moz-border-radius: 3px;
   -moz-box-shadow: 0 1px 3px #eee;
-  border-radius: 3px;
   box-shadow: 0 1px 3px #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* BSAC */
@@ -343,6 +347,8 @@ body.mocha-dark {
   -moz-box-shadow: none;
   box-shadow: none;
   background-color: initial;
+
+  /* BSAC change color scheme button */
   cursor: pointer; /* BSAC */
   -webkit-transition: opacity 200ms; /* BSAC */
   -moz-transition: opacity 200ms; /* BSAC */
