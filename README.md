@@ -1,4 +1,4 @@
-# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 8.3.0
+# <img src="./images/mocha-dark-logo.svg" alt="Mocha Logo" /> mocha-dark version: 8.3.2
 
 ☕️ A dark color scheme for [Mocha](https://www.npmjs.com/package/mocha), the Simple, flexible, fun JavaScript test framework for Node.js &amp; The Browser. ☕️
 
@@ -9,7 +9,7 @@ For accessibility, for those who have visual difficulties or for those who just 
 
 ## Features
 
-In this release (version: 8.3.0) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
+In this release (version: 8.3.2) we provide a replacement for `mocha.css` and `mocha.js` with a dark color scheme for use in Mocha browser based tests.
 * Contains both default (light) and dark scheme.
 * It detects the CSS media query prefers-color-scheme setting on startup if your Operating System sets it and there is no override.
 * It changes to dark or light as your OS changes the preferes-color-scheme setting if no override is stored.
@@ -104,3 +104,4 @@ mocha.updateColorScheme()
 * 2.4.5 [release](https://github.com/bcowgill/mocha-dark/blob/v2.4.5/README.md) to match Mocha release using localStorage instead of cookie to save settings.
 * 3.2.0 [release](https://github.com/bcowgill/mocha-dark/blob/v3.2.0/README.md) to match Mocha release hover and tooltip on progress indicator, replay color change.
 * 8.3.0 [release](https://github.com/bcowgill/mocha-dark/blob/v8.3.0/README.md) to match Mocha release progress indicator re-renders, CSS prefers-color-scheme media query, features complete.
+* 8.3.2 [release](https://github.com/bcowgill/mocha-dark/blob/v8.3.2/README.md) to match Mocha release added png logo image, updated chai

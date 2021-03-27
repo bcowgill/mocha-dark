@@ -1,4 +1,4 @@
-// "version": "8.3.0",
+// "version": "8.3.2",
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -27215,7 +27215,7 @@
 	});
 
 	var name = "mocha-dark"; /* LIGHT/DARK SCHEME */
-	var version$2 = "8.3.0";
+	var version$2 = "8.3.2";
 	var homepage = "https://github.com/bcowgill/mocha-dark/"; /* LIGHT/DARK SCHEME */
 	var notifyLogo = "https://raw.githubusercontent.com/bcowgill/mocha-dark/main/images/mocha-dark-logo.png"; /* DARK SCHEME */
 	var _package = {
